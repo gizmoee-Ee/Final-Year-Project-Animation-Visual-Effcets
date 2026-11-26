@@ -1,0 +1,157 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>DORMANT திரைக்கதை</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@500;700;800&family=Noto+Sans+Tamil:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: one reading column like a script page; film colours carry the structure (cyan sluglines, amber for the wake-up and the speaker names). */
+:root {
+  --bg: #f2f5f6;
+  --surface: #ffffff;
+  --fg: #12202a;
+  --muted: #55646f;
+  --line: #d3dde2;
+  --cyan: #0a7f93;
+  --amber: #b86400;
+  --font-display: "Anek Tamil", "Noto Sans Tamil", system-ui, sans-serif;
+  --font-body: "Noto Sans Tamil", "Anek Tamil", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1317; --surface: #141c22; --fg: #e6eef2; --muted: #93a4ae;
+    --line: #26343d; --cyan: #4fd1e6; --amber: #ffa62b; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1317; --surface: #141c22; --fg: #e6eef2; --muted: #93a4ae;
+  --line: #26343d; --cyan: #4fd1e6; --amber: #ffa62b; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.95;
+  padding-block: 2rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 44rem; margin-inline: auto; }
+header { padding-block: 1.5rem 2.5rem; border-bottom: 1px solid var(--line); }
+.film { font-family: var(--font-mono); font-weight: 500; font-size: clamp(2.6rem, 11vw, 4.5rem); letter-spacing: 0.12em; line-height: 1.1; margin: 0; }
+.film span { color: var(--amber); }
+.tagline { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--cyan); margin: 0.75rem 0 0; text-wrap: balance; }
+.sub { font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.08em; color: var(--muted); margin: 0.5rem 0 0; }
+dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 1.5rem; margin: 2rem 0 0; font-size: 0.98rem; line-height: 1.7; }
+dt { color: var(--muted); font-weight: 500; }
+dd { margin: 0; min-width: 0; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem; padding-block: 1.25rem; border-bottom: 1px solid var(--line); }
+nav a { font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); text-decoration: none; border: 1px solid var(--line); padding: 0.25rem 0.65rem; border-radius: 4px; line-height: 1.6; }
+nav a:hover, nav a:focus-visible { color: var(--fg); border-color: var(--cyan); outline: none; }
+section { padding-block: 2.5rem 0.5rem; }
+.scene-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1rem; margin-bottom: 1rem; }
+h2 { font-family: var(--font-display); font-weight: 800; font-size: 1.6rem; line-height: 1.4; margin: 0; text-wrap: balance; }
+.time { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); letter-spacing: 0.06em; }
+.slug { font-family: var(--font-display); font-weight: 700; color: var(--cyan); background: var(--surface); border-left: 3px solid var(--cyan); padding: 0.4rem 0.9rem; margin: 0 0 1.25rem; font-size: 0.98rem; line-height: 1.7; }
+p { margin: 0 0 1.1rem; }
+.act { max-width: 40rem; }
+.dlg { margin: 1.5rem auto 1.5rem; max-width: 26rem; padding-inline: 0.5rem; }
+.dlg .who { font-family: var(--font-display); font-weight: 700; color: var(--amber); text-align: center; margin: 0; line-height: 1.6; }
+.dlg .how { font-size: 0.88rem; color: var(--muted); text-align: center; margin: 0; line-height: 1.6; }
+.dlg .say { margin: 0.35rem 0 0; font-weight: 500; font-size: 1.08rem; }
+.dlg.machine .say { font-family: var(--font-mono); font-size: 0.95rem; }
+.end { text-align: center; font-family: var(--font-display); font-weight: 700; margin: 2rem 0 0; }
+.end .cut { color: var(--muted); font-weight: 500; letter-spacing: 0.04em; margin: 0; }
+.end .fin { font-size: 1.6rem; margin: 0.5rem 0 0; }
+@media (max-width: 480px) { dl { grid-template-columns: 1fr; gap: 0.1rem; } dt { margin-top: 0.75rem; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1 class="film">DORMANT<span>.</span></h1>
+    <p class="tagline">சில உறக்கங்கள் கலையாமலே இருக்கட்டும்.</p>
+    <p class="sub">குறும்படத் திரைக்கதை · சுமார் 5 நிமிடம்</p>
+    <dl>
+      <dt>வகை</dt><dd>அறிவியல் புனைவு / அதிரடி</dd>
+      <dt>கதைச்சுருக்கம்</dt><dd>பாழடைந்த மாடியில் உறங்கிக்கிடக்கும் வேற்றுலக மையத்தை அர்ஜுன் எழுப்பிவிடுகிறான். அது ஆயுதம் ஏந்திய வேவு இயந்திரமாக மாறும்போது, அதன் பின்னால் வரும் படை வருவதற்குள் அதை வெல்ல அவனுக்கு ஐந்து நிமிடங்களே உள்ளன.</dd>
+      <dt>அர்ஜுன் (20 வயது)</dt><dd>நான்காம் பகுதியைச் சேர்ந்த பழைய இரும்பு சேகரிப்பவன்; சமயோசிதமானவன், ஆனால் ஆயுதமற்றவன்.</dd>
+      <dt>வேவு இயந்திரம்</dt><dd>ஒற்றைச் செங்கண்ணும் செயற்கையாகச் சிதைந்த குரலும் கொண்ட தானியங்கி இயந்திரம்.</dd>
+    </dl>
+  </header>
+
+  <nav aria-label="காட்சிகள்">
+    <a href="#s1">1 · 0:00</a><a href="#s2">2 · 0:45</a><a href="#s3">3 · 1:45</a><a href="#s4">4 · 3:00</a><a href="#s5">5 · 4:15</a>
+  </nav>
+
+  <section id="s1">
+    <div class="scene-head"><h2>காட்சி 1 · கண்டுபிடிப்பு</h2><span class="time">0:00 – 0:45</span></div>
+    <p class="slug">வெளிப்புறம் · மாடி / பாழடைந்த தொழிற்சாலை வளாகம் · அந்தி</p>
+    <div class="act">
+      <p>கற்காரைத் தரையின் மேல் காற்று ஊளையிடுகிறது. பொன்னிற மாலை ஒளி மெல்ல மங்கி, அடர்ந்த அந்தி இருளாக மாறுகிறது.</p>
+      <p>அர்ஜுன் (20 வயது) கருகிய ஒரு பள்ளத்தின் அருகே மண்டியிட்டு அமர்ந்திருக்கிறான். இடிபாடுகளுக்குள் பாதி புதைந்து கிடக்கிறது <strong>மையம்</strong>: கைப்பிடி அளவிலான, மங்கலான கருமை நிறத்தில், கோண வடிவங்களால் ஆன உருண்டை. அதன் இணைப்புக் கோடுகளில் மங்கிய நீலப்பச்சை ஒளி துடிக்கிறது.</p>
+      <p>அர்ஜுன் தன் பையிலிருந்து உறுதியான தொடுதிரைக் கருவியை எடுத்துத் திரையைத் தொடுகிறான். திரையிலிருந்து முப்பரிமாண ஒளிக்கட்டம் ஒன்று மேலே எழுகிறது.</p>
+      <p>அவன் மின்காப்பு இடுக்கியை மையத்தை நோக்கி நீட்டுகிறான். உலோக முனைகள் ஓர் அங்குல தூரத்தை நெருங்கியதும், இடைவெளியில் நிலைமின் மின்னல் தெறிக்கிறது.</p>
+    </div>
+    <div class="dlg"><p class="who">அர்ஜுன்</p><p class="how">(மெல்லிய குரலில்)</p><p class="say" style="text-align:center">சாகல... தூங்குது, அவ்ளோதான்.</p></div>
+  </section>
+
+  <section id="s2">
+    <div class="scene-head"><h2>காட்சி 2 · விழிப்பு</h2><span class="time">0:45 – 1:45</span></div>
+    <p class="slug">வெளிப்புறம் · மாடி · தொடர்ச்சி</p>
+    <div class="act">
+      <p>மையத்தின் நீலப்பச்சைக் கோடுகள் திடீரெனச் செம்மஞ்சளாகப் பற்றி எரிகின்றன. ஆழ்ந்த முரலொலி தரையிலுள்ள சரளைக் கற்களை அதிரவைக்க, சிறு கற்கள் தரையிலிருந்து மெல்ல மேலெழும்புகின்றன.</p>
+      <p>அர்ஜுன் தடுமாறிப் பின்வாங்குகிறான். இடுக்கி கையிலிருந்து நழுவி விழுகிறது.</p>
+      <p>"கிளாக்!" என்ற கூர்மையான உலோக ஒலியுடன் மையம் திறக்கிறது. அதன் வெளிப்புறத் தகடுகள் விலகி விரிந்து, தரையிலிருந்து மூன்றடி உயரத்தில் மிதக்கின்றன. அடியில் மூன்று சிறு உந்துக் குழல்கள் பற்றிக்கொண்டு தூசிச் சுழலைக் கிளப்புகின்றன.</p>
+      <p>மையம் தானாக இயங்கும் <strong>வேவு இயந்திரமாக</strong> விரிகிறது. அது மென்மையாகச் சுழன்று, தன் ஒற்றைச் செங்கண்ணை அர்ஜுன் மேல் நிலைநிறுத்துகிறது.</p>
+    </div>
+    <div class="dlg machine"><p class="who">வேவு இயந்திரம் (குரல் மட்டும்)</p><p class="how">(செயற்கையான, சிதைந்த குரலில்)</p><p class="say" style="text-align:center">பதிவில்லாத உயிரியல் அடையாளம் கண்டறியப்பட்டது. அனுமதி நெறிமுறையைத் தெரிவிக்கவும்.</p></div>
+    <div class="act">
+      <p>அர்ஜுன் மெதுவாகக் கைகளை உயர்த்துகிறான். சில அடி தொலைவில் விழுந்து கிடக்கும் தன் தொடுதிரைக் கருவியை நோக்கி அவன் பார்வை ஓடுகிறது.</p>
+    </div>
+    <div class="dlg"><p class="who">அர்ஜுன்</p><p class="say" style="text-align:center">நான் சும்மா பழைய இரும்பு பொறுக்குறவன். நாலாம் பகுதி. பாருங்க, கையில ஆயுதம் எதுவும் இல்ல.</p></div>
+  </section>
+
+  <section id="s3">
+    <div class="scene-head"><h2>காட்சி 3 · வருடலும் தாக்குதலும்</h2><span class="time">1:45 – 3:00</span></div>
+    <p class="slug">வெளிப்புறம் · மாடி · தொடர்ச்சி</p>
+    <div class="act">
+      <p>இயந்திரத்தின் செங்கண் விரிகிறது. செங்குத்தான ஒளிக்கீற்று வலை வெளிப்பட்டு, அர்ஜுனைத் தலை முதல் கால் வரை வருடுகிறது; அவன் உடைக்குள் எலும்புக்கூடு ஒரு கணம் மின்னி மறைகிறது.</p>
+    </div>
+    <div class="dlg machine"><p class="who">வேவு இயந்திரம் (குரல் மட்டும்)</p><p class="say" style="text-align:center">அனுமதி: மறுக்கப்பட்டது. அச்சுறுத்தல் மதிப்பீடு: உயர்வு. அடக்கும் நடவடிக்கை தொடங்குகிறது.</p></div>
+    <div class="act">
+      <p>இயந்திரத்தின் பக்கத் தகடுகள் நழுவித் திறக்கின்றன. உள்ளே இரட்டை மின்காந்தத் துப்பாக்கிகள், உயர் மின்னழுத்த நீல அனல் ஆற்றலுடன் நிரம்புகின்றன.</p>
+      <p>இயந்திரம் சுடும் அதே கணத்தில், அர்ஜுன் துருப்பிடித்த கற்காரைத் தூணின் பின்னால் பாய்ந்து மறைகிறான்.</p>
+      <p>"க்ராக்-பூம்!" ஒரு கணம் முன்பு அவன் தலை இருந்த இடத்தில், தூணின் ஓரத்தில் கொதிக்கும் அனல் குண்டு மோதுகிறது. இரும்புக் கம்பித் துண்டுகளும் கற்காரைச் சிதறல்களும் தூசியும் காற்றில் தெறிக்கின்றன.</p>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="scene-head"><h2>காட்சி 4 · எதிர்த் தாக்குதல்</h2><span class="time">3:00 – 4:15</span></div>
+    <p class="slug">வெளிப்புறம் · மாடி · தொடர்ச்சி</p>
+    <div class="act">
+      <p>இடிந்துகொண்டிருக்கும் தூணுக்குப் பின்னால் சிக்கிய அர்ஜுன் மூச்சிரைக்கிறான். மற்றொரு குண்டு தூணின் பக்கத்தில் பட்டுத் தெறித்து, அவன் மேல் தீப்பொறிகளைப் பொழிகிறது. அவனது தொடுதிரைக் கருவி திறந்த வெளியில், இடப்பக்கம் மூன்றடி தொலைவில் கிடக்கிறது.</p>
+      <p>அவன் துருப்பிடித்த ஒரு இரும்புக் குழாய்த் துண்டை எடுத்து மாடியின் மறுபுறம் எறிகிறான். அது ஓர் உலோகக் காற்றுத் துவாரத்தில் பெருஞ்சத்தத்துடன் மோதுகிறது. இயந்திரம் சத்தம் வந்த திசையில் சட்டெனத் திரும்பி, அந்தத் துவாரத்தைச் சுடுகிறது.</p>
+      <p>அந்த அரை நொடி இடைவெளியில் அர்ஜுன் வெளியே பாய்ந்து, கருவியைப் பற்றிக்கொண்டு மீண்டும் மறைவுக்குள் வழுக்கிச் செல்கிறான். விரிசல் விழுந்த திரையில் அவன் விரல்கள் பறக்கின்றன; மின்கலத்தின் ஆற்றலை எல்லை மீறி ஏற்றி, அதை மின்காந்த அதிர்வாக மாற்றுகிறான். திரையில் சிவப்பு எச்சரிக்கை மிளிர்கிறது: <em>மின்கலம் எல்லை மீறுகிறது // 99%... 100%.</em></p>
+      <p>இயந்திரம் சத்தமின்றித் தூணைச் சுற்றி மிதந்து வந்து, மிக அருகில் அர்ஜுனை இலக்காக்குகிறது. அதன் மின்காந்தத் துப்பாக்கிகள் உச்ச ஒலியில் ஊளையிடுகின்றன.</p>
+    </div>
+    <div class="dlg"><p class="who">அர்ஜுன்</p><p class="say" style="text-align:center">பிடிச்சுக்கோ.</p></div>
+    <div class="act">
+      <p>அவன் கொதிக்கும் கருவியைக் கற்காரைத் தரையில் சறுக்கவிட்டு, மிதக்கும் இயந்திரத்தின் அடியிலேயே அனுப்புகிறான்.</p>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="scene-head"><h2>காட்சி 5 · இருட்டடிப்பு</h2><span class="time">4:15 – 5:00</span></div>
+    <p class="slug">வெளிப்புறம் · மாடி · தொடர்ச்சி</p>
+    <div class="act">
+      <p>இயந்திரம் கீழே கிடக்கும் கருவியைப் பார்க்கிறது.</p>
+      <p>"ப்ஸ்ஸ்ட்-தூம்!" மின்காந்த அதிர்வலை வெளிப்படுகிறது: சிதைந்த காற்றும் நீல நிலைமின்னொளியும் கொண்ட குமிழ் மாடி முழுவதும் பரவுகிறது.</p>
+      <p>இயந்திரத்தின் செங்கண் வெறிகொண்டு மினுங்குகிறது. உந்துக் குழல்கள் தடுமாறி அணைகின்றன. கனத்த உலோகத் தடாலுடன் அது தரையில் விழுந்து, அர்ஜுனின் காலணிகளுக்குச் சில அங்குலம் முன் வழுக்கி நிற்கிறது.</p>
+      <p>அமைதி. தொலைவில் நகரத்தின் மெல்லிய முணுமுணுப்பு மட்டும் கேட்கிறது.</p>
+      <p>அர்ஜுன் மெதுவாக மூச்சை விடுகிறான்; தூணில் தலை சாய்க்கிறான். அசைவற்றுக் கிடக்கும் இயந்திரத்தைப் பார்த்துவிட்டு, அடிவானத்தை நோக்குகிறான்.</p>
+      <p>வெகு தொலைவில், நகரத்தின் வானுயரக் கட்டிடங்களுக்கு மேலே, மேகங்களுக்குள் ஒரே மாதிரியான பல பத்துச் செம்மஞ்சள் விளக்குகள் ஒளிர்ந்து மெல்ல இறங்குகின்றன.</p>
+      <p>அர்ஜுன் கண்களை மூடிச் சோர்ந்து சரிகிறான்.</p>
+    </div>
+    <div class="dlg"><p class="who">அர்ஜுன்</p><p class="say" style="text-align:center">...இன்னும் பெரிய மின்கலம் வேணும் போலயே.</p></div>
+    <div class="end"><p class="cut">கருமைக்கு மறைகிறது.</p><p class="fin">முற்றும்</p></div>
+  </section>
+</div>
+
+</body></html>

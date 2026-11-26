@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Anek Tamil", "Noto Sans Tamil", system-ui, sans-serif;
+  --font-body: "Noto Sans Tamil", "Anek Tamil", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+:root {
+  color-scheme: light;
+  --canvas: #f2f5f6;
+  --surface: #ffffff;
+  --surface-subtle: #e8eef0;
+  --ink: #12202a;
+  --muted: #55646f;
+  --line: #d3dde2;
+  --cyan: #0a7f93;
+  --amber: #b86400;
+  --crimson: #b91c1c;
+}
+
+.dark {
+  color-scheme: dark;
+  --canvas: #0d1317;
+  --surface: #141c22;
+  --surface-subtle: #1b262e;
+  --ink: #e6eef2;
+  --muted: #93a4ae;
+  --line: #26343d;
+  --cyan: #4fd1e6;
+  --amber: #ffa62b;
+  --crimson: #f87171;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .print-full {
+    max-width: 100% !important;
+    width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}

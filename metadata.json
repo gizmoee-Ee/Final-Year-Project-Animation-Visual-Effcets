@@ -1,0 +1,6 @@
+{
+  "name": "DORMANT · திரைக்கதை",
+  "description": "பாழடைந்த மாடியில் உறங்கும் வேற்றுலக மையத்தை எழுப்பும் 5 நிமிட தமிழ் அறிவியல் புனைவு குறும்படத் திரைக்கதை.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
